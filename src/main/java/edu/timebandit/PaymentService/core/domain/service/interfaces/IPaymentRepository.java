@@ -1,6 +1,6 @@
 package edu.timebandit.PaymentService.core.domain.service.interfaces;
 
-import edu.timebandit.PaymentService.core.appservice.Payment;
+import edu.timebandit.PaymentService.core.domain.model.Payment;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

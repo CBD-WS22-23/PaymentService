@@ -1,6 +1,7 @@
 package edu.timebandit.PaymentService.port.checkout.producer;
 
 import edu.timebandit.PaymentService.port.checkout.dtos.PaymentResultDTO;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -8,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PaymentResultProducer {
+public class PaymentResultProducer implements IPaymentResultProducer{
 
     @Value("payment_exchange")
     private String exchange;
@@ -24,7 +25,7 @@ public class PaymentResultProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void sendPaymentResultMessage(PaymentResultDTO paymentResult) {
+    public void sendPaymentResultMessage(@Valid PaymentResultDTO paymentResult) {
         logger.info("Sending message to notify payment result for order: {}", paymentResult);
         rabbitTemplate.convertAndSend(exchange, paymentResultRoutingKey, paymentResult);
     }

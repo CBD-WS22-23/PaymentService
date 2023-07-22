@@ -1,4 +1,4 @@
-package edu.timebandit.PaymentService.core.appservice;
+package edu.timebandit.PaymentService.core.domain.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

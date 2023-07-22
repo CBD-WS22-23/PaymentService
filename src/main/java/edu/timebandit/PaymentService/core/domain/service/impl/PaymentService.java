@@ -1,7 +1,7 @@
 package edu.timebandit.PaymentService.core.domain.service.impl;
 
-import edu.timebandit.PaymentService.core.appservice.Payment;
-import edu.timebandit.PaymentService.core.appservice.PaymentState;
+import edu.timebandit.PaymentService.core.domain.model.Payment;
+import edu.timebandit.PaymentService.core.domain.model.PaymentState;
 import edu.timebandit.PaymentService.core.domain.service.interfaces.IPaymentRepository;
 import edu.timebandit.PaymentService.core.domain.service.interfaces.IPaymentService;
 import org.springframework.stereotype.Service;

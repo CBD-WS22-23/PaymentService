@@ -1,4 +1,4 @@
-package edu.timebandit.PaymentService.core.appservice;
+package edu.timebandit.PaymentService.core.domain.model;
 
 public enum PaymentState {
     AUTHORIZED,

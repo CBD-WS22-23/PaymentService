@@ -1,6 +1,6 @@
 package edu.timebandit.PaymentService.core.domain.service.interfaces;
 
-import edu.timebandit.PaymentService.core.appservice.Payment;
+import edu.timebandit.PaymentService.core.domain.model.Payment;
 
 public interface IPaymentService {
 
