@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
-public class ProcessPaymentRequestAndNotifyServices {
+public class ProcessPaymentRequestAndNotifyCheckout {
 
     @Autowired
     private IPaymentService paymentService;
