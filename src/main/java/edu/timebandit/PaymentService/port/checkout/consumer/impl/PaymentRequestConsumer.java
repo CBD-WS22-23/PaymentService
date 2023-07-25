@@ -1,6 +1,6 @@
 package edu.timebandit.PaymentService.port.checkout.consumer.impl;
 
-import edu.timebandit.PaymentService.core.appservice.ProcessPaymentRequestAndNotifyCheckout;
+import edu.timebandit.PaymentService.core.appservice.interfaces.IProcessPaymentRequestAndNotifyCheckout;
 import edu.timebandit.PaymentService.port.checkout.consumer.interfaces.IPaymentRequestConsumer;
 import edu.timebandit.PaymentService.port.checkout.dtos.PaymentRequestDTO;
 import jakarta.validation.Valid;
@@ -16,7 +16,7 @@ public class PaymentRequestConsumer implements IPaymentRequestConsumer {
     private final static Logger logger = LoggerFactory.getLogger(PaymentRequestConsumer.class);
 
     @Autowired
-    private ProcessPaymentRequestAndNotifyCheckout processPaymentRequest;
+    private IProcessPaymentRequestAndNotifyCheckout processPaymentRequest;
 
     @RabbitListener(queues = "request_payment_queue")
     public void receivePaymentRequestMessage(@Valid PaymentRequestDTO paymentRequest) {

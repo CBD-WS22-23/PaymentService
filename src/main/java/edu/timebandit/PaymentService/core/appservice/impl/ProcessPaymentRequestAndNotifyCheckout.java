@@ -1,5 +1,6 @@
-package edu.timebandit.PaymentService.core.appservice;
+package edu.timebandit.PaymentService.core.appservice.impl;
 
+import edu.timebandit.PaymentService.core.appservice.interfaces.IProcessPaymentRequestAndNotifyCheckout;
 import edu.timebandit.PaymentService.core.domain.service.interfaces.IPaymentService;
 import edu.timebandit.PaymentService.port.checkout.dtos.PaymentRequestDTO;
 import edu.timebandit.PaymentService.port.checkout.dtos.PaymentResultDTO;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
-public class ProcessPaymentRequestAndNotifyCheckout {
+public class ProcessPaymentRequestAndNotifyCheckout implements IProcessPaymentRequestAndNotifyCheckout {
 
     @Autowired
     private IPaymentService paymentService;
